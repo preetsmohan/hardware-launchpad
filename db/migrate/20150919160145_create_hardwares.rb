@@ -3,6 +3,8 @@ class CreateHardwares < ActiveRecord::Migration
     create_table :hardwares do |t|
       t.string :name
       t.text :description
+      t.boolean :inuse
+      t.boolean :requirescredit
       t.datetime :checkout
       t.datetime :returned
       t.integer :deadline

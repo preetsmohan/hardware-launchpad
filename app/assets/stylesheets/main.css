@@ -1,6 +1,7 @@
 *{
 	overflow:none;
 	font-family: 'Quicksand', sans-serif;
+	color:white;
 }
 body{
 	width:100%;
@@ -35,6 +36,22 @@ h2{
 	margin-top:15px;
 }
 
+a{
+	color:##DADADA;
+}
+
+label{
+	color:white;
+}
+
+.error{
+	color:white;
+}
+
+#signed-in{
+	margin-top:5vh;
+}
+
 .headers{
 	text-align: center;
 	color:white;
@@ -47,11 +64,25 @@ h2{
 	height:25vh;
 }
 
+.edit-header{
+	margin-top:0px;
+	padding-top:3vh;
+	height:17	vh;
+}
+
 .login, .signup{
 	text-align: center;
 	margin-top:12vh;
 	display: block;
 	position: relative;
+}
+
+.signup-edit{
+	margin-top:2vh;
+}
+
+#remember{
+	width:300;
 }
 
 .main-header{
@@ -95,6 +126,11 @@ input{
 
 input[type=submit]{
 	background-color: #39151E;
+}
+input[type=checkbox]{
+	width:initial;
+	border:0;
+	vertical-align: center;
 }
 
 input[type=submit]:hover{

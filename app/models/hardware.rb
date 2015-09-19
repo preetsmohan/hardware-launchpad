@@ -1,6 +1,6 @@
 class Hardware < ActiveRecord::Base
 
-	belong_to :user
+	belongs_to :user
 
 	validates :name, presence: true,
                     length: { minimum: 1 }

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'users/:id' => 'users#view'
   get 'checkout' => 'users#checkout'
+  post 'checkout' => 'users#checkout_submission'
   get 'inventory' => 'main#inventory'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
