@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  checkout: 2015-09-19 12:01:45
+  returned: 2015-09-19 12:01:45
+  deadline: 1
+
+two:
+  name: MyString
+  description: MyText
+  checkout: 2015-09-19 12:01:45
+  returned: 2015-09-19 12:01:45
+  deadline: 1
