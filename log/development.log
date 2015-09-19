@@ -848,3 +848,99 @@ Processing by Devise::RegistrationsController#edit as HTML
   Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/registrations/edit.html.erb within layouts/application (4.8ms)
 Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.1ms)
 >>>>>>> 6feb725bcb57b221691d53e1dd532f6661bb6659
+
+
+Started GET "/" for ::1 at 2015-09-19 04:16:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 04:16:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (2.4ms)
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 1400ms (Views: 1369.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-09-19 04:16:21 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-09-19 04:16:28 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/b3IFaGXtUIN1RXbnBbRi58s+b62ZhOY+n/JHFbiAJY02Jdtg29zr6No1+eqS2bxIOD5AvRubKsUjJo9Q2guw==", "user"=>{"email"=>"cszechy@umich.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'cszechy@umich.edu' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "cszechy@umich.edu"], ["encrypted_password", "$2a$10$gzQbWH.gCOgHsPJcbYEhJuVv8kykL463C1H5BEJgqd4TvddicwRq6"], ["created_at", "2015-09-19 08:16:28.565219"], ["updated_at", "2015-09-19 08:16:28.565219"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-09-19 08:16:28.568910"], ["current_sign_in_at", "2015-09-19 08:16:28.568910"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-09-19 08:16:28.569629"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 04:16:28 -0400
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-09-19 04:16:33 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"puHdGOi8VND4GMpaT/A1Fm2N+OO4gHA9F1mW/wwYTJ7xxEhlCDe3y06iPVK/KUPLh3LI4UmIUcHY4luziE5kJw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 04:16:33 -0400
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 04:16:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 04:16:37 -0400
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 04:16:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 04:18:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 250ms (Views: 240.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 04:18:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/Colin/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 78ms (Views: 64.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inventory" for ::1 at 2015-09-19 04:18:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#inventory as HTML
+  Rendered main/inventory.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 246ms (Views: 236.2ms | ActiveRecord: 0.0ms)
