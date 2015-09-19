@@ -5,6 +5,12 @@ class UsersController < ApplicationController
   def logout
   end
 
+  def signup
+  end
+
+  def checkout
+  end
+
   def view
   end
 end

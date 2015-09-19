@@ -1,5 +1,5 @@
 class MainController < ApplicationController
-  def checkout
+  def index
   end
 
   def inventory
