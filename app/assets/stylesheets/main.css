@@ -26,6 +26,8 @@ body{
 }
 
 h1{
+	font-family: 'Quicksand', sans-serif;
+	color:white;
 	margin:0;
 }
 h2{
@@ -40,14 +42,14 @@ h2{
 	height:20vh;
 	font-family: 'Quicksand', sans-serif;
 	padding-top:15vh;
-	margin-top:10vh;
+	margin-top:7vh;
 	display: block;
 	height:25vh;
 }
 
-.login{
+.login, .signup{
 	text-align: center;
-	margin-top:15vh;
+	margin-top:12vh;
 	display: block;
 	position: relative;
 }

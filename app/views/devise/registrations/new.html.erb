@@ -1,29 +1,80 @@
-<h2>Sign up</h2>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <meta property="og:title" content="Hardware Registration"/> 
+
+      <title>Login: Hardware Registration</title>
+       <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <%= stylesheet_link_tag "main.css" %>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="star"></div>
+    <div class="container" id="container">
+  <div class="headers" id="header">
+          <h1 class="main-header">We have hardware for you to check out.</h1>
+          <h2>You won't believe what happens next!</h2>
+        </div>
+<div class="signup">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email,  :placeholder => "Email", autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+ 
+    <%= f.password_field :password,  :placeholder => "Password", autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation,  :placeholder => "Confirm Password", autocomplete: "off" %>
   </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+</div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</body>
+<script>
+      var limit=200, // Max number of stars
+      body=document.getElementById("container");
+      loop={
+       //initilizeing
+       start:function(){
+        for (var i=0; i <= limit; i++) {
+         var star=this.newStar();
+         star.style.top=this.rand()*100+"%";
+         star.style.left=this.rand()*100+"%";
+         star.style.webkitAnimationDelay=(this.rand()*3)+"s";
+         star.style.mozAnimationDelay=(this.rand()*3)+"s";
+         star.style.animationDelay=(this.rand()*3)+"s";
+         body.appendChild(star);
+        };
+       },
+       //to get random number
+       rand:function(){
+        return Math.random();
+       },
+       //createing html dom for star
+       newStar:function(){
+        var d = document.createElement('div');
+        d.innerHTML = '<div class="star"></div>';
+         return d.firstChild;
+       },
+      };
+      loop.start();
+    </script>
+</html>
