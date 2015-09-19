@@ -42,6 +42,11 @@ h2{
 	margin-top:10vh;
 }
 
+.login{
+	text-align: center;
+	margin-top:15vh;
+}
+
 .main-header{
 	font-size:4.5em;
 }
@@ -64,6 +69,26 @@ button{
 
 
 button:hover{
+	background-color: #782E41;
+}
+
+input{
+	font-family:'Quicksand', sans-serif;
+	background-color: #782E41;
+	font-size:1.5em;
+	color:white;
+	border:0;
+	padding:10px;
+	margin:10px;
+	border-radius: 10px;
+	width:300px;
+}
+
+input[type=submit]{
+	background-color: #39151E;
+}
+
+input[type=submit]:hover{
 	background-color: #782E41;
 }
 
