@@ -57,6 +57,10 @@ label{
 	position: relative;
 }
 
+#remember{
+	width:300;
+}
+
 .main-header{
 	font-size:4.5em;
 }
