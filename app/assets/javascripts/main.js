@@ -25,3 +25,5 @@ loop={
  },
 };
 loop.start();
+
+alert('Hello');
