@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :hardwares
   #get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -11,9 +13,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   root to: 'main#index'
-  get 'login' => 'users#login'
-  get 'logout' => 'users#logout'
-  get 'signup' => 'users#signup'
+
   get 'users/:id' => 'users#view'
   get 'checkout' => 'users#checkout'
   get 'inventory' => 'main#inventory'

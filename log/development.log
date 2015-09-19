@@ -1881,6 +1881,1046 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 11:01:05 -0400
+<<<<<<< HEAD
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateHardwares (20150919160145)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "hardwares" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "checkout" datetime, "returned" datetime, "deadline" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150919160145"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:29:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 465ms (Views: 456.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:29:59 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:29:59 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:29:59 -0400
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:32:02 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"otEymMuF1QdPF2bjt2aVvOSJq9AfY040tPQIJu18n35IKX3jlTk6EU4PLbEM/xefT7TiEooa5s0+yEvrBt1udA==", "hardware"=>{"name"=>"arduino", "description"=>"idk bruh"}, "commit"=>"Save Hardware"}
+Unpermitted parameter: description
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "hardwares" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "arduino"], ["created_at", "2015-09-19 16:32:02.032647"], ["updated_at", "2015-09-19 16:32:02.032647"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/hardwares/1
+Completed 302 Found in 28ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/hardwares/1" for ::1 at 2015-09-19 12:32:02 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHardware Load (0.2ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hardwares/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `description' for nil:NilClass):
+    5:  
+    6: <p>
+    7:   <strong>Description:</strong>
+    8:   <%= @article.description %>
+    9: </p>
+  app/views/hardwares/show.html.erb:8:in `_app_views_hardwares_show_html_erb___481901822425147485_70365579889420'
+
+
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.1ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.9ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.1ms)
+
+
+Started GET "/hardwares/1" for ::1 at 2015-09-19 12:32:47 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hardwares/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:32:47 -0400
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:32:58 -0400
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 59ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:33:11 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QVn0ozCoOqApE5XS72UBcreafAO3I3f1jdjDxzRW1j6robvYbhTVtigL3oBU/INRHKc1wSJa3wwH5IAK3/cnNA==", "hardware"=>{"name"=>"test 1", "description"=>"please work"}, "commit"=>"Save Hardware"}
+Unpermitted parameter: description
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "hardwares" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "test 1"], ["created_at", "2015-09-19 16:33:11.995607"], ["updated_at", "2015-09-19 16:33:11.995607"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/hardwares/2
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/hardwares/2" for ::1 at 2015-09-19 12:33:12 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mHardware Load (0.3ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered hardwares/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hardwares/index" for ::1 at 2015-09-19 12:38:24 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mHardware Load (0.2ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Hardware with 'id'=index):
+  app/controllers/hardwares_controller.rb:15:in `show'
+
+
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.8ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.9ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:39:47 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.2ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:40:59 -0400
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:41:05 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"baWJzlDqOZ+Q86L5i+wHOej7daxpIHbCS7zvhWWladCHXca1DlbWiZHr6aswdYUaQ8Y8bvxZ3jvBgKxIjgSY2g==", "hardware"=>{"name"=>"boom", "description"=>"this will work"}, "commit"=>"Save Hardware"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "hardwares" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "boom"], ["description", "this will work"], ["created_at", "2015-09-19 16:41:05.824054"], ["updated_at", "2015-09-19 16:41:05.824054"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/hardwares/3
+Completed 302 Found in 17ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/hardwares/3" for ::1 at 2015-09-19 12:41:05 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHardware Load (0.2ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hardwares/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hardwares/3" for ::1 at 2015-09-19 12:43:12 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hardwares/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 42.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:43:12 -0400
+
+
+Started GET "/hardwares/3" for ::1 at 2015-09-19 12:43:14 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hardwares/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:43:14 -0400
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:43:17 -0400
+Processing by HardwaresController#index as HTML
+  [1m[36mHardware Load (0.2ms)[0m  [1mSELECT "hardwares".* FROM "hardwares"[0m
+  Rendered hardwares/index.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `new_article_path' for #<#<Class:0x007ffe82b49140>:0x007ffe86418a20>):
+    14:   <% end %>
+    15: </table>
+    16: 
+    17: <%= link_to 'New article', new_article_path %>
+  app/views/hardwares/index.html.erb:17:in `_app_views_hardwares_index_html_erb__2668575713052656116_70365575417500'
+
+
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.2ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:44:10 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.2ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:44:10 -0400
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:44:12 -0400
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 65ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:44:26 -0400
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:44:31 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KASITGn1nJV8dr8ZJ30K0uk0aCqmm4XsMSQsxalWSfzC/Mc3N0lzg31u9Euc5IjxQgkh6DPiLRW7GG8IQve49g==", "hardware"=>{"name"=>"fsfg", "description"=>"dsf"}, "commit"=>"Save Hardware"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hardwares" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "fsfg"], ["description", "dsf"], ["created_at", "2015-09-19 16:44:31.109679"], ["updated_at", "2015-09-19 16:44:31.109679"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/hardwares/4
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:31 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:33 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:35 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:35 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:35 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:35 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:35 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:35 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:44:36 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares/4" for ::1 at 2015-09-19 12:45:04 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hardwares/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:45:04 -0400
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:45:08 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.2ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 51.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:46:25 -0400
+Processing by HardwaresController#index as HTML
+  [1m[36mHardware Load (0.2ms)[0m  [1mSELECT "hardwares".* FROM "hardwares"[0m
+  Rendered hardwares/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:46:25 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:46:25 -0400
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:46:25 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:46:25 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:46:25 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:46:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:46:26 -0400
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:46:26 -0400
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 56ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:46:28 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.3ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:55:13 -0400
+Processing by HardwaresController#index as HTML
+  [1m[36mHardware Load (0.3ms)[0m  [1mSELECT "hardwares".* FROM "hardwares"[0m
+  Rendered hardwares/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:55:13 -0400
+
+
+Started GET "/hardwares/new" for ::1 at 2015-09-19 12:55:15 -0400
+Processing by HardwaresController#new as HTML
+  Rendered hardwares/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 57ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:55:19 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRkPR/nZjmygHozM1DTuZ5Ph/R1JGD2BRnhYZIfDh2DL4UA8p2VheqEGx55vrWxEONy039xhlXjMRBupbGJ2ag==", "hardware"=>{"name"=>"ijf", "description"=>"oidsjf"}, "commit"=>"Save Hardware"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `title' for #<Hardware:0x007ffe882ba398>):
+  app/controllers/hardwares_controller.rb:18:in `create'
+
+
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.9ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.6ms)
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:56:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRkPR/nZjmygHozM1DTuZ5Ph/R1JGD2BRnhYZIfDh2DL4UA8p2VheqEGx55vrWxEONy039xhlXjMRBupbGJ2ag==", "hardware"=>{"name"=>"ijf", "description"=>"oidsjf"}, "commit"=>"Save Hardware"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `title' for #<Hardware:0x007f8e58003320>):
+  app/controllers/hardwares_controller.rb:18:in `create'
+
+
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.9ms)
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:57:32 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRkPR/nZjmygHozM1DTuZ5Ph/R1JGD2BRnhYZIfDh2DL4UA8p2VheqEGx55vrWxEONy039xhlXjMRBupbGJ2ag==", "hardware"=>{"name"=>"ijf", "description"=>"oidsjf"}, "commit"=>"Save Hardware"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `title' for #<Hardware:0x007f8e547196b8>):
+  app/controllers/hardwares_controller.rb:18:in `create'
+
+
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.7ms)
+
+
+Started POST "/console/repl_sessions/9836abf7ae0cf506da4401900e81e93c/trace" for ::1 at 2015-09-19 12:58:03 -0400
+
+
+Started POST "/hardwares" for ::1 at 2015-09-19 12:59:29 -0400
+Processing by HardwaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRkPR/nZjmygHozM1DTuZ5Ph/R1JGD2BRnhYZIfDh2DL4UA8p2VheqEGx55vrWxEONy039xhlXjMRBupbGJ2ag==", "hardware"=>{"name"=>"ijf", "description"=>"oidsjf"}, "commit"=>"Save Hardware"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hardwares" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ijf"], ["description", "oidsjf"], ["created_at", "2015-09-19 16:59:29.102179"], ["updated_at", "2015-09-19 16:59:29.102179"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/hardwares/5
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/hardwares/5" for ::1 at 2015-09-19 12:59:29 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mHardware Load (0.2ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered hardwares/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 253ms (Views: 244.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 12:59:29 -0400
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 12:59:31 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.2ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 78ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 13:01:14 -0400
+Processing by HardwaresController#index as HTML
+  [1m[36mHardware Load (0.3ms)[0m  [1mSELECT "hardwares".* FROM "hardwares"[0m
+  Rendered hardwares/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 13:01:14 -0400
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 13:02:59 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.1ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 13:02:59 -0400
+
+
+Started GET "/hardwares/1" for ::1 at 2015-09-19 13:03:01 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHardware Load (0.6ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hardwares/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hardwares/1/edit" for ::1 at 2015-09-19 13:03:03 -0400
+Processing by HardwaresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHardware Load (0.1ms)[0m  SELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hardwares/edit.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/hardwares/1" for ::1 at 2015-09-19 13:03:06 -0400
+Processing by HardwaresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yi1uxMQm74HrdxoiMObRmqyv257Qga/3FtUCigC2n3wg1SG/mpoAl+pvUXCLf1O5B5KSXEX4Bw6c6UFH6xdudg==", "hardware"=>{"name"=>"arduino", "description"=>"hdshah"}, "commit"=>"Save Hardware", "id"=>"1"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "hardwares" SET "description" = ?, "updated_at" = ? WHERE "hardwares"."id" = ?[0m  [["description", "hdshah"], ["updated_at", "2015-09-19 17:03:06.338074"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/hardwares/1
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/hardwares/1" for ::1 at 2015-09-19 13:03:06 -0400
+Processing by HardwaresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT  "hardwares".* FROM "hardwares" WHERE "hardwares"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hardwares/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 13:03:09 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.5ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 13:52:30 -0400
+Processing by HardwaresController#index as HTML
+  [1m[36mHardware Load (0.1ms)[0m  [1mSELECT "hardwares".* FROM "hardwares"[0m
+  Rendered hardwares/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 68ms (Views: 67.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 13:52:31 -0400
+
+
+Started GET "/hardwares" for ::1 at 2015-09-19 13:56:55 -0400
+Processing by HardwaresController#index as HTML
+  [1m[35mHardware Load (0.3ms)[0m  SELECT "hardwares".* FROM "hardwares"
+  Rendered hardwares/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/hardwares.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/main.self-51b38026955049417c067fde492b3279d74d886b687a52f3899abbe8783677e8.css?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/hardwares.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 13:56:55 -0400
+
+
+Started GET "/" for ::1 at 2015-09-19 14:04:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (182.8ms)
+Completed 200 OK in 297ms (Views: 287.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/star.png" for ::1 at 2015-09-19 14:04:32 -0400
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 14:04:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 194ms (Views: 178.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-09-19 14:04:59 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c9zTGwMF7sVSyJtNdWHIeJ/qmTlxSOUnQAzJwrzvpzeZJJxgXbkB01PQ0B/O+EpbNNfQ++QxTd7KMIoPV05WPQ==", "user"=>{"email"=>"cgjohn@umich.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "cgjohn@umich.edu"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-09-19 05:27:11.266199"], ["current_sign_in_at", "2015-09-19 18:04:59.263304"], ["sign_in_count", 3], ["updated_at", "2015-09-19 18:04:59.264221"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 106ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 14:04:59 -0400
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.2ms)
+=======
 
 
 <<<<<<< HEAD
@@ -2949,3 +3989,4 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 11:49:29 -0400
 >>>>>>> 917970ef7b0ceacf1bf197962d3a507ee58fedb3
+>>>>>>> 03d2934fc832d70793cb3c53d17fca5b8b9d4be4
