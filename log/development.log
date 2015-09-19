@@ -1308,3 +1308,251 @@ ActionController::RoutingError (No route matches [GET] "/assets/star.png"):
   Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
   Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (279.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-09-19 10:25:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 354ms (Views: 331.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-09-19 10:27:08 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 79ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-09-19 10:28:53 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 10:33:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (219.6ms)
+Completed 200 OK in 344ms (Views: 335.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.self-e7ad2ba4dbd0fb95347d8262a0b961ff2d90bd18c08bc289d653aad2702cd290.css?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 10:33:44 -0400
+
+
+Started GET "/" for ::1 at 2015-09-19 10:41:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (228.8ms)
+Completed 200 OK in 341ms (Views: 330.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.self-e7ad2ba4dbd0fb95347d8262a0b961ff2d90bd18c08bc289d653aad2702cd290.css?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 10:41:13 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2015-09-19 10:41:16 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 128ms (Views: 117.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 10:41:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-09-19 10:41:21 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 99ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-09-19 10:41:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /Users/Pavi/.rvm/gems/ruby-2.2.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 86ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-19 10:42:48 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.self-e7ad2ba4dbd0fb95347d8262a0b961ff2d90bd18c08bc289d653aad2702cd290.css?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 10:42:49 -0400
+
+
+Started GET "/" for ::1 at 2015-09-19 10:43:55 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.self-e7ad2ba4dbd0fb95347d8262a0b961ff2d90bd18c08bc289d653aad2702cd290.css?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 10:43:55 -0400
+
+
+Started GET "/" for ::1 at 2015-09-19 10:44:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (154.0ms)
+Completed 200 OK in 270ms (Views: 259.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/main.self-e7ad2ba4dbd0fb95347d8262a0b961ff2d90bd18c08bc289d653aad2702cd290.css?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-19 10:44:06 -0400

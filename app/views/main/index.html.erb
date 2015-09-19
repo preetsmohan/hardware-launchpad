@@ -28,6 +28,19 @@
 			<div class="buttons row">
 				<button id="log-in">Log in</button>
 				<button id="sign-up">Sign up</button>
+			<div class="buttons">
+
+				<% if user_signed_in? %>
+  					Logged in as <strong><%= current_user.email %></strong>.
+  					<%= link_to 'Edit profile', edit_user_registration_path, :class => 'buttons', :id => 'sign-up' %> |
+  					<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'buttons', :id => 'log-in' %>
+				<% else %>
+  					<%= link_to "Sign up", new_user_registration_path, :class => 'buttons', :id => 'sign-up'  %> |
+  					<%= link_to "Login", new_user_session_path, :class => 'buttons', :id => 'log-in' %>
+				<% end %>
+
+				<!--<button id="log-in"><h1>Log in</h1></button>
+				<button id="sign-up"><h1>Sign up</h1></button>-->
 			</div>
 			</div>
 		</div>
