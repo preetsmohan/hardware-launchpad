@@ -1,0 +1,113 @@
+*{
+	overflow:none;
+}
+body{
+	width:100%;
+	margin:0;
+	padding:0;
+	background-color: #222338;
+	overflow-x:none;
+	overflow-y:none;
+}
+
+.container{
+	margin:0;
+	padding:0;
+	width:100%;
+	overflow:none;
+}
+
+.row{
+	margin:0;
+	padding:0;
+
+
+}
+
+h1{
+	margin:0;
+}
+h2{
+	margin:0;
+	margin-top:15px;
+}
+
+.headers{
+	text-align: center;
+	color:white;
+	margin:0;
+	height:20vh;
+	font-family: 'Quicksand', sans-serif;
+	padding-top:15vh;
+	margin-top:10vh;
+}
+
+.main-header{
+	font-size:4.5em;
+}
+
+.buttons{
+	text-align: center;
+	margin-top:20vh;
+}
+
+button{
+	font-family: 'Quicksand', sans-serif;
+	background-color: #39151E;
+	font-size:.5em;
+	color:white;
+	border:0;
+	padding: 20px;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+
+button:hover{
+	background-color: #782E41;
+}
+
+.star{
+	width:10px;
+	height:10px;
+	background-image:url('star.png');
+	background-size:10px;
+	 display: block;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ opacity:.6;
+ z-index: -1;
+  
+	-webkit-animation: glitter 10s linear 0s infinite normal;
+}
+@keyframes glitter {
+ 0%   { transform: scale(1.0); opacity: 1; }
+ 25%  { transform: scale(0.5); opacity: 0; }
+ 50%  { transform: scale(1.0); opacity: 1; }
+ 75%  { transform: scale(0.5); opacity: 0; }
+ 100% { transform: scale(1.0); opacity: 1; }
+}
+
+@-moz-keyframes glitter {
+ 0%   { -moz-transform: scale(1.0); opacity: 1; }
+ 25%  { -moz-transform: scale(0.5); opacity: 0; }
+ 50%  { -moz-transform: scale(1.0); opacity: 1; }
+ 75%  { -moz-transform: scale(0.5); opacity: 0; }
+ 100% { -moz-transform: scale(1.0); opacity: 1; }
+}
+@-webkit-keyframes glitter {
+ 0%   { -webkit-transform: scale(1.0); opacity: 1; }
+ 25%  { -webkit-transform: scale(0.5); opacity: 0; }
+ 50%  { -webkit-transform: scale(1.0); opacity: 1; }
+ 75%  { -webkit-transform: scale(0.5); opacity: 0; }
+ 100% { -webkit-transform: scale(1.0); opacity: 1; }
+}
+
+@-moz-keyframes glitter {
+ 0%   { -moz-transform: scale(1.0); opacity: 1; }
+ 25%  { -moz-transform: scale(0.5); opacity: 0; }
+ 50%  { -moz-transform: scale(1.0); opacity: 1; }
+ 75%  { -moz-transform: scale(0.5); opacity: 0; }
+ 100% { -moz-transform: scale(1.0); opacity: 1; }
+}
