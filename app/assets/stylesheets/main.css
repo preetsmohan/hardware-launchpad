@@ -35,6 +35,11 @@ h2{
 	margin:0;
 	margin-top:15px;
 }
+
+a{
+	color:##DADADA;
+}
+
 label{
 	color:white;
 }
@@ -62,7 +67,7 @@ label{
 .edit-header{
 	margin-top:0px;
 	padding-top:3vh;
-	height:17vh;
+	height:17	vh;
 }
 
 .login, .signup{
