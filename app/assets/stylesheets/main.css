@@ -40,11 +40,15 @@ h2{
 	font-family: 'Quicksand', sans-serif;
 	padding-top:15vh;
 	margin-top:10vh;
+	display: block;
+	height:25vh;
 }
 
 .login{
 	text-align: center;
 	margin-top:15vh;
+	display: block;
+	position: relative;
 }
 
 .main-header{
@@ -53,18 +57,20 @@ h2{
 
 .buttons{
 	text-align: center;
-	margin-top:20vh;
+	margin-top:15vh;
+	display: block;
 }
 
 button{
 	font-family: 'Quicksand', sans-serif;
 	background-color: #39151E;
-	font-size:.5em;
+	font-size: 1.5em;
 	color:white;
 	border:0;
 	padding: 20px;
 	margin: 10px;
 	border-radius: 10px;
+	width:300px;
 }
 
 
