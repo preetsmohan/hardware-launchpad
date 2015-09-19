@@ -1,5 +1,5 @@
 var limit=200, // Max number of stars
-body=document.getElementById("header");
+body=document.getElementById("container");
 loop={
  //initilizeing
  start:function(){
