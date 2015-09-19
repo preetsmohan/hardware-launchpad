@@ -1,2 +1,20 @@
-<h1>Main#inventory</h1>
+<h1>Inventory</h1>
+
+<table>
+	<tr>
+		<th>Item</th>
+		<th>Quantity Available</th>
+		<th>Quantity Total</th>
+		<th>Next Due<th>
+	</tr>
+
+	<% @hardwares.each do |hardware| %>
+		<tr>
+			<td><%= hardware["name"] %></td>
+			<td><%= hardware["available"] %></td>
+			<td><%= hardware["total"] %></td>
+			<td><%= hardware["due"] %></td>
+		</tr>
+	<% end %>
+
 <p>Find me in app/views/main/inventory.html.erb</p>
