@@ -59,11 +59,21 @@ label{
 	height:25vh;
 }
 
+.edit-header{
+	margin-top:0px;
+	padding-top:3vh;
+	height:17vh;
+}
+
 .login, .signup{
 	text-align: center;
 	margin-top:12vh;
 	display: block;
 	position: relative;
+}
+
+.signup-edit{
+	margin-top:2vh;
 }
 
 #remember{
