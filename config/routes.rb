@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  root to: 'users#login'
+  root to: 'users#index'
+  get 'login' => 'users#login'
+  get 'logout' => 'users#logout'
+  get 'signup' => 'users#signup'
   get 'users/:id' => 'users#view'
   get 'checkout' => 'main#checkout'
   get 'inventory' => 'main#inventory'
