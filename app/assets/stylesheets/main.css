@@ -1,6 +1,7 @@
 *{
 	overflow:none;
 	font-family: 'Quicksand', sans-serif;
+	color:white;
 }
 body{
 	width:100%;
@@ -34,6 +35,17 @@ h2{
 	margin:0;
 	margin-top:15px;
 }
+label{
+	color:white;
+}
+
+.error{
+	color:white;
+}
+
+#signed-in{
+	margin-top:5vh;
+}
 
 .headers{
 	text-align: center;
@@ -52,6 +64,10 @@ h2{
 	margin-top:12vh;
 	display: block;
 	position: relative;
+}
+
+#remember{
+	width:300;
 }
 
 .main-header{
@@ -95,6 +111,11 @@ input{
 
 input[type=submit]{
 	background-color: #39151E;
+}
+input[type=checkbox]{
+	width:initial;
+	border:0;
+	vertical-align: center;
 }
 
 input[type=submit]:hover{

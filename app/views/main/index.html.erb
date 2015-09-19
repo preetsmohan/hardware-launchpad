@@ -23,6 +23,12 @@
 					<div class="star"></div>
 					<h1 class="main-header">Welcome to Hardware Registration!</h1>
 					<h2>Want some hardware? We have some hardware.</h2>
+				<div id="signed-in">
+					<% if user_signed_in? %>
+  					Logged in as <strong><%= current_user.email %></strong>.
+  					<% end %>
+  				</div>
+
 				</div>
 
 			<!-- <div class="buttons row">
@@ -31,11 +37,11 @@
 			<div class="buttons"> -->
 				<div class="buttons row">
 				<% if user_signed_in? %>
-  					Logged in as <strong><%= current_user.email %></strong>.
-  					<%= link_to 'Edit profile', edit_user_registration_path, :class => 'buttons', :id => 'sign-up' %> |
-  					<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'buttons', :id => 'log-in' %>
+  					<br>
+  					<%= link_to '<button id="edit">Edit Profile</button>'.html_safe, edit_user_registration_path, :class => 'button-link', :id => 'sign-up' %>
+  					<%= link_to '<button id="logout">Log Out</button>'.html_safe, destroy_user_session_path, method: :delete, :class => 'button-link', :id => 'log-in' %>
 				<% else %>
-  					<%= link_to '<button id="signup">Sign Up</button>'.html_safe, new_user_registration_path, :class => 'button-link', :id => 'sign-up'  %> |
+  					<%= link_to '<button id="signup">Sign Up</button>'.html_safe, new_user_registration_path, :class => 'button-link', :id => 'sign-up'  %>
   					<%= link_to '<button id="login">Log In</button>'.html_safe, new_user_session_path, :class => 'button-link', :id => 'log-in' %>
 				<% end %>
 

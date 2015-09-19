@@ -1,16 +1,37 @@
-<h2>Log in</h2>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <meta property="og:title" content="Hardware Registration"/> 
+
+      <title>Login: Hardware Registration</title>
+       <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <%= stylesheet_link_tag "main.css" %>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+<body>
+  <div class="star"></div>
+  <div class="container" id="container">
+  <div class="headers" id="header">
+          <h1 class="main-header">Hackers love them!</h1>
+          <h2>Click here to learn this one weird trick to get hardware. </h2>
+        </div>
+<div class="signup">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, :placeholder => "Email", autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, :placeholder => "Password", autocomplete: "off" %>
   </div>
-
+  
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -24,3 +45,36 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</body>
+<script>
+      var limit=200, // Max number of stars
+      body=document.getElementById("container");
+      loop={
+       //initilizeing
+       start:function(){
+        for (var i=0; i <= limit; i++) {
+         var star=this.newStar();
+         star.style.top=this.rand()*100+"%";
+         star.style.left=this.rand()*100+"%";
+         star.style.webkitAnimationDelay=(this.rand()*3)+"s";
+         star.style.mozAnimationDelay=(this.rand()*3)+"s";
+         star.style.animationDelay=(this.rand()*3)+"s";
+         body.appendChild(star);
+        };
+       },
+       //to get random number
+       rand:function(){
+        return Math.random();
+       },
+       //createing html dom for star
+       newStar:function(){
+        var d = document.createElement('div');
+        d.innerHTML = '<div class="star"></div>';
+         return d.firstChild;
+       },
+      };
+      loop.start();
+    </script>
+</html>
