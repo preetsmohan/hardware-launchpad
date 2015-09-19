@@ -1,6 +1,7 @@
 *{
 	overflow:none;
 	font-family: 'Quicksand', sans-serif;
+	color:white;
 }
 body{
 	width:100%;
@@ -36,6 +37,14 @@ h2{
 }
 label{
 	color:white;
+}
+
+.error{
+	color:white;
+}
+
+#signed-in{
+	margin-top:5vh;
 }
 
 .headers{
