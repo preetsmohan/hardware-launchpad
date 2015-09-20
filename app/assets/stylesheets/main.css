@@ -12,6 +12,10 @@ body{
 	overflow-y:none;
 }
 
+.logo{
+	text-align: center;
+}
+
 .container{
 	margin:0;
 	padding:0;
@@ -119,6 +123,12 @@ td{
 	font-size:4.5em;
 }
 
+.index-header{
+	margin-top:0;
+	padding-top:0;
+}
+
+
 option, select{
 	color:black;
 }
@@ -128,6 +138,10 @@ option, select{
 	margin-top:15vh;
 	display: block;
 	font-size: 
+}
+
+.index-buttons{
+	margin-top:0;
 }
 
 .buttons-lower{
