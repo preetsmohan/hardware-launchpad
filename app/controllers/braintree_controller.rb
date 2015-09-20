@@ -55,10 +55,10 @@ class BraintreeController < ApplicationController
 		puts params[:phone]
 
 		result = Braintree::Customer.create(
-			:first_name => current_user.first_name,
-			:last_name => current_user.last_name,
-			:phone => current_user.phone,
-			:email => current_user.email,
+			:first_name => params[:first],
+			:last_name => params[:last],
+			:phone => params[:phone],
+			:email => params[:email],
 			:payment_method_nonce => "fake-valid-nonce")
 
 		if result.success?
@@ -66,13 +66,18 @@ class BraintreeController < ApplicationController
 			puts result.customer.id
 			puts "token"
 			puts result.customer.payment_methods[0].token
-			current_user.hascredit = true
-			current_user.braintreeid = result.customer.id
-			render "success"
+			user = User.find_by email: params[:email]
+			user.hascredit = true
+			user.braintreeid = result.customer.id
+			user.save
+			#current_user.hascredit = true
+			#current_user.braintreeid = result.customer.id
+			redirect_to :back
+			#render plain: "success"
 		else
-			puts "nope, sorry"
+			puts plain: "nope, sorry"
 			p result.errors
-			render "failure"
+			render plain: result.errors
 		end
 		
 	end

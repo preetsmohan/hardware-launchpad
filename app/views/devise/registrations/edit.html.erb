@@ -21,6 +21,7 @@
        <div class="headers edit-header" id="header">
           <h1 class="main-header">Edit <%= resource_name.to_s.humanize %></h1>
           <h2>It's okay. We all make mistakes. </h2>
+          <h3><%= link_to "Or do you want to head back home?", root_path%></h3>
         </div>
 <div class="signup signup-edit">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -55,6 +56,7 @@
   </div>
 <% end %>
 
+<%if !current_user.hascredit %>
 <h3>Credit card information</h3>
 
 <form id="update_credit" method="post" action="/update_credit">
@@ -84,6 +86,9 @@ braintree.setup(clientToken, "dropin", {
 });
 </script>
 
+<% else %>
+<h2>Credit card information recorded</h2>
+<% end %>
 
 <p><h2>Unhappy?</h2> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 

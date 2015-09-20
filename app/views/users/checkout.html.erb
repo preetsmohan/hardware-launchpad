@@ -22,21 +22,27 @@
 				<h1 class="main-header">Whaddaya buyin', stranger?</h1> <br> <br>
 			</div>
 		<div class="buttons-lower checkout row">
-<%= form_tag do %>
+<% if current_user.hascredit %>
+<%= form_tag("/new_checkout", method: "post") do %>
 	<%= label_tag(:form_label, "Name: ") %>
 	<%= label_tag(:info_label, current_user.first_name + " " + current_user.last_name) %><br>
 	<%= label_tag(:form_label, "Phone number: ") %>
 	<%= label_tag(:info_label, current_user.phone) %><br>
 	<%= label_tag(:form_label, "Email: ") %>
-	<%= text_field_tag(:test) %>
+	<!--<%= text_field_tag(:test) %>-->
 	<%= label_tag(:info_label, current_user.email) %><br>
-	<%= label_tag(:form_label, "Choose piece(s) of hardware:") %> 
+	<%= label_tag(:form_label, "Credit card information: ")%>
+	<%= label_tag(:info_label, current_user.hascredit)%><br>
+	<%= label_tag(:form_label, "Choose a piece of hardware:") %> <br>
 	<%= select_tag :options, options_for_select(@hardwares) %><br>
-	<%= label_tag(:form_label, "Enter credit card info if necessary with Braintree") %> <br><br>
+	<!--<%= label_tag(:form_label, "Enter credit card info if necessary with Braintree") %> <br><br> -->
 	</div>
 	<div class="button-holder">
 	<%= submit_tag("Submit") %> <br>
-</div>
+	</div>
+<% end %>
+<% else %>
+	<h2><%= link_to "Please enter your credit card information on your profile page.", edit_user_registration_path%></h2>
 <% end %>
 </div>
 </body>
