@@ -18,11 +18,11 @@
   <body>
     <div class="star"></div>
     <div class="container" id="container">
-  <div class="headers" id="header">
+  <div class="headers edit-header" id="header">
           <h1 class="main-header">We have hardware for you to check out.</h1>
           <h2>You won't believe what happens next!</h2>
         </div>
-<div class="signup">
+<div class="signup signup-edit">
 <p class="error"><%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %> </p>
 
@@ -56,7 +56,6 @@
 </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
 </div>
 </body>
 <script>

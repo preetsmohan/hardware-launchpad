@@ -14,6 +14,11 @@ body{
 
 .logo{
 	text-align: center;
+	margin-top: -5vh;
+}
+
+.navbar-link{
+	width:initial;
 }
 
 .container{
@@ -26,8 +31,11 @@ body{
 .row{
 	margin:0;
 	padding:0;
+}
 
-
+.alert{
+	width:40%;
+	margin:auto;
 }
 
 h1{
@@ -198,6 +206,12 @@ input[type=checkbox]{
 
 input[type=submit]:hover{
 	background-color: #782E41;
+}
+
+#payment-form{
+	width:300px;
+	margin:auto;
+	border-radius: 10px;
 }
 
 .star{
