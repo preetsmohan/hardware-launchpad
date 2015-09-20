@@ -15,9 +15,24 @@ Rails.application.routes.draw do
   root to: 'main#index'
 
   get 'users/:id' => 'users#view'
-  get 'checkout' => 'users#checkout'
-  post 'checkout' => 'users#checkout_submission'
+  get 'new_checkout' => 'users#checkout'
+  post 'new_checkout' => 'users#checkout_submission'
   get 'inventory' => 'main#inventory'
+  get 'charge' => 'braintree#charge'
+  post 'charge' => 'braintree#charge_post'
+
+  # Braintree stuff
+  get "/client_token" => 'braintree#client_token'
+  post '/checkout' => 'braintree#checkout'
+  #get "/client_token" do
+  #  Braintree::ClientToken.generate
+  #end
+
+  #post "/checkout" do
+  #  nonce = params[:payment_method_nonce]
+    # Use payment method nonce here...
+  #end
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
