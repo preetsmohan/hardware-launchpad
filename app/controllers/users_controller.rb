@@ -25,10 +25,16 @@ class UsersController < ApplicationController
   end
 
   def checkout_submission
-    pp params
-    puts "options!"
-    puts params[:options]
+
+    Hardware.all.each do |hardware|
+      if (hardware.inuse == false) && (hardware.name == params[:options])
+        hardware.inuse == true
+        break
+      end
+    end
+
     checkout
+
   end
 
   def view
