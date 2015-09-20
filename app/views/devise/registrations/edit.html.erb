@@ -70,6 +70,15 @@
 
 <!-- <%= @client_token %> -->
 
+<% else %>
+<h2>Credit card information recorded</h2>
+<% end %>
+
+<p><h2>Unhappy?</h2> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
+</div>
+</div>
 <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
 <script>
 // We generated a client token for you so you can test out this code
@@ -81,20 +90,14 @@ var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiI0MDVlO
 console.log("hi!");
 //console.log(@client_token);
 
-braintree.setup(clientToken, "dropin", {
-  container: "payment-form"
+$.get("/client_token", function(response) {
+  console.log(response);
+  braintree.setup(response, "dropin", {
+    container: "payment-form"
+  });
 });
+
 </script>
-
-<% else %>
-<h2>Credit card information recorded</h2>
-<% end %>
-
-<p><h2>Unhappy?</h2> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
-</div>
-</div>
 </body>
 <script>
       var limit=200, // Max number of stars

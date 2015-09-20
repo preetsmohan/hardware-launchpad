@@ -11,7 +11,8 @@ class BraintreeController < ApplicationController
 	end
 
 	def client_token
-		@client_token = Braintree::ClientToken.generate
+		render plain: Braintree::ClientToken.generate
+		#@client_token = Braintree::ClientToken.generate
 		puts "client token"
 		puts @client_token
 	end
@@ -25,8 +26,8 @@ class BraintreeController < ApplicationController
 			:last_name => current_user.last_name,
 			:phone => current_user.phone,
 			:email => current_user.email,
-			:payment_method_nonce => "fake-valid-nonce")
-			#:payment_method_nonce => nonce);
+			#:payment_method_nonce => "fake-valid-nonce")
+			:payment_method_nonce => nonce);
 
 		if result.success?
 			puts "success"
