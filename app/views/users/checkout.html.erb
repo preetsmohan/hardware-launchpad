@@ -28,6 +28,7 @@
 	<%= label_tag(:form_label, "Phone number: ") %>
 	<%= label_tag(:info_label, current_user.phone) %><br>
 	<%= label_tag(:form_label, "Email: ") %>
+	<%= text_field_tag(:test) %>
 	<%= label_tag(:info_label, current_user.email) %><br>
 	<%= label_tag(:form_label, "Choose piece(s) of hardware:") %> 
 	<%= select_tag :options, options_for_select(@hardwares) %><br>

@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   # Braintree stuff
   get "/client_token" => 'braintree#client_token'
   post '/checkout' => 'braintree#checkout'
+  post '/update_credit' => 'braintree#update_credit'
   #get "/client_token" do
   #  Braintree::ClientToken.generate
   #end
