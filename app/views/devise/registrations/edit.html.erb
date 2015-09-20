@@ -65,7 +65,7 @@
   <input id="last" name="last" type="hidden" value=<%= current_user.last_name %> />  
   <input id="phone" name="phone" type="hidden" value=<%= current_user.phone %> />  
   <input id="email" name="email" type="hidden" value=<%= current_user.email %> />      
-  <input type="submit" value="Save credit card info">
+  <input type="submit" value="Add credit card info">
 </form>
 
 <!-- <%= @client_token %> -->
@@ -74,7 +74,7 @@
 <h2>Credit card information recorded</h2>
 <% end %>
 
-<p><h2>Unhappy?</h2> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p><h2>Unhappy?</h2> <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
 </div>
