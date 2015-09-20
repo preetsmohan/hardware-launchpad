@@ -1,18 +1,41 @@
-<h1>Inventory</h1>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+   		<meta property="og:title" content="Hardware Registration"/> 
+
+   		<title>Hardware Registration</title>
+   		 <!-- Bootstrap -->
+   		  <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  		<%= stylesheet_link_tag "main.css" %>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+	<div class="star"></div>
+	<div class="container" id="container">
+		<div class="edit-header headers" id="header">
+			<h1 class="main-header">A Whole New World</h1>
+			<h2>(of things to do with hardware!)</h2>
+		</div>
+		<div class="inventory">
 <table>
 	<tr>
 		<th>Item</th>
 		<th>Credit Card required</th>
 		<th>Quantity Available</th>
 		<th>Quantity Total</th>
-		<th>Next Due<th>
+		<th>Next Due</th>
 		<th>Description</th>			
 	</tr>
 
 	<% @hardwares.each do |hardware| %>
 		<tr>
-			<td><%= hardware["name"] %></td>
+			<td class="item-name"><%= hardware["name"] %></td>
 			<td><%= hardware["requirescredit"] %></td>
 			<td><%= hardware["available"] %></td>
 			<td><%= hardware["total"] %></td>
@@ -20,5 +43,36 @@
 			<td><%= hardware["description"] %></td>			
 		</tr>
 	<% end %>
-
-<p>Find me in app/views/main/inventory.html.erb</p>
+</div>
+</div>
+</body>
+<script>
+			var limit=200, // Max number of stars
+			body=document.getElementById("container");
+			loop={
+			 //initilizeing
+			 start:function(){
+			  for (var i=0; i <= limit; i++) {
+			   var star=this.newStar();
+			   star.style.top=this.rand()*100+"%";
+			   star.style.left=this.rand()*100+"%";
+			   star.style.webkitAnimationDelay=(this.rand()*3)+"s";
+			   star.style.mozAnimationDelay=(this.rand()*3)+"s";
+			   star.style.animationDelay=(this.rand()*3)+"s";
+			   body.appendChild(star);
+			  };
+			 },
+			 //to get random number
+			 rand:function(){
+			  return Math.random();
+			 },
+			 //createing html dom for star
+			 newStar:function(){
+			  var d = document.createElement('div');
+			  d.innerHTML = '<div class="star"></div>';
+			   return d.firstChild;
+			 },
+			};
+			loop.start();
+		</script>
+</html>

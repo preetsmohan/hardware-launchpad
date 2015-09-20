@@ -17,10 +17,12 @@
 	</head>
 
 	<body>
+		
 		<div class="container" id='container'>
 			<div class="row">
 				<div class="headers" id="header">
 					<div class="star"></div>
+					<h1 class="main-header">Welcome to the Hardware Launchpad!</h1>
 					<h1 class="logo"><img src="../assets/Planet.png" alt="planet" width="300"></h1>
 					<h1 class="main-header">Welcome to Hardware Registration!</h1>
 					<h2>Want some hardware? We have some hardware.</h2>
@@ -31,15 +33,16 @@
   				</div>
 
 				</div>
-
-				<%= link_to 'yo check out our hardware', inventory_path %><br>
-				<%= link_to 'yo literally check out out hardware pls', new_checkout_path %>
-
 			<!-- <div class="buttons row">
 				<button id="log-in">Log in</button>
 				<button id="sign-up">Sign up</button>
 			<div class="buttons"> -->
 				<div class="buttons row">
+					<%= link_to '<button id="inventory">Check Out Our Hardware</button>'.html_safe, inventory_path, :class => 'button-link', :id => 'inventory' %>
+				<%= link_to '<button id="checkout">Literally Check Out Hardware</button>'.html_safe, checkout_path, :class => 'button-link', :id => 'checkout' %>
+				</div>
+				<div class="buttons-lower row">
+
 				<% if user_signed_in? %>
   					<br>
   					<%= link_to '<button id="edit">Edit Profile</button>'.html_safe, edit_user_registration_path, :class => 'button-link', :id => 'sign-up' %>

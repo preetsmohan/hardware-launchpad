@@ -37,11 +37,12 @@ h2{
 }
 
 a{
-	color:##DADADA;
+	color:white;
 }
 
 label{
 	color:white;
+	font-weight: lighter;
 }
 
 .error{
@@ -77,6 +78,35 @@ label{
 	position: relative;
 }
 
+table{
+	text-align: center;
+}
+
+.inventory{
+	text-align: center;
+}
+
+th{
+	text-align: center;
+	width:300px;
+	font-size: 1.7em;
+}
+
+.item-name{
+	font-weight:bold;	
+	background-color: #39151E;
+}
+
+td{
+	text-align: center;
+	width:200px;
+	margin:10px;
+	border: 1px dashed #782E41;
+	font-size:1.3em;
+	background-color: #222338;
+
+}
+
 .signup-edit{
 	margin-top:2vh;
 }
@@ -89,10 +119,28 @@ label{
 	font-size:4.5em;
 }
 
+option, select{
+	color:black;
+}
+
 .buttons{
 	text-align: center;
 	margin-top:15vh;
 	display: block;
+	font-size: 
+}
+
+.buttons-lower{
+	text-align: center;
+}
+
+.button-holder{
+	text-align: center;
+}
+
+.checkout{
+	font-size:1.5em;
+	font-weight:;
 }
 
 button{
