@@ -1,22 +1,30 @@
-<h1>Listing Hardware!</h1>
- 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
- 
-  <% @hardwares.each do |hardware| %>
+<% if current_user.admin? %>
+  <h1>Listing Hardware!</h1>
+   
+  <table>
     <tr>
-      <td><%= hardware.name %></td>
-      <td><%= hardware.description %></td>
-      <td><%= link_to 'Show', hardware_path(hardware) %></td>
-      <td><%= link_to 'Edit', edit_hardware_path(hardware) %></td>
-      <td><%= link_to 'Destroy', hardware_path(hardware),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <th>Name</th>
+      <th>Description</th>
     </tr>
-  <% end %>
-</table>
+   
+    <% @hardwares.each do |hardware| %>
+      <tr>
+        <td><%= hardware.name %></td>
+        <td><%= hardware.description %></td>
+        <td><%= link_to 'Show', hardware_path(hardware) %></td>
+        <td><%= link_to 'Edit', edit_hardware_path(hardware) %></td>
+        <td><%= link_to 'Destroy', hardware_path(hardware),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
 
-<%= link_to 'New Hardware', new_hardware_path %>
+  <%= link_to 'New Hardware', new_hardware_path %>
+<% else %>
+
+  <h1> Sorry, you don't have access to this page! </h1>
+  <h2> Check out our hardware instead! </h2>
+  <h3><%= link_to 'Back To Home', root_path %></h3>
+
+<% end %>
